@@ -25,9 +25,9 @@ Should be able to complete an End to end scneario
      BookingPageObjects.Verify if Economy Radio button is selected as default
      BookingPageObjects.Click on the Search button after entering all booking details
      Flightresultspageobjects.wait for the flight booking page to load
-     #FlightResultsPageObjects.Verify if the Non stop checkbox is selected by default
+     FlightResultsPageObjects.Verify if the Non stop checkbox is selected by default
      FLIGHTRESULTSPAGEOBJECTS.CLICK ON THE NON STOP CHECKBOX IF IT IS NOT SELECTED
-     FlightResultsPageObjects.Print prices of all the flights both depature and arrival
-     FlightResultsPageObjects.Select the Last flight from the list of flights
+     FlightResultsPageObjects.Print prices of all arrival flights
+     FlightResultsPageObjects.Print prices of all depature flights and select the last depauture flight from the list
      flightresultspageobjects.click on the book button to book the flights
      ReviewPageObject.Get the title of the Page and Print in it.
