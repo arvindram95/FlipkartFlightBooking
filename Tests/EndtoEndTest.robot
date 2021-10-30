@@ -5,7 +5,7 @@ Variables    ../Locators/Locators.py
 Resource    ../PO/Generic.robot
 #Resource    ../PO/BookingPagePO.robot
 Suite Setup    Opening Browser with FlipKart Url
-#Suite Teardown    Close Browser
+Suite Teardown    Close Browser
 Resource          ../PO/BookingPageObjects.robot
 Resource          ../PO/LandingPageObjects.robot
 Resource         ../PO/FlightResultsPageObjects.robot
