@@ -14,7 +14,7 @@ class FlightResultsPage:
          print(arrival_flight_price.text)
     @keyword
     def print_depart_flight_prices_and_select_last_depature_flight(self,depart_flight):
-        y = 1000
+        y = 1500
         for timer in range(0,1):
             depart_flight_prices = self.seleniumlib.get_webelements(f"{depart_flight}")
             for depart_flight_price in depart_flight_prices:

@@ -27,7 +27,7 @@ Select the arrival city
         auto_suggestion_dropdown        ${arrival_city}      Chennai
 
 Select the Departue date
-           date_selection    1      14
+           date_selection    1      13
 
 Select the Return date
           set selenium implicit wait    15s
