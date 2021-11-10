@@ -1,229 +1,223 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.1 (Python 3.9.7 on win32)" generated="20211110 11:55:31.566" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.2 (Python 3.9.7 on win32)" generated="20211110 21:47:25.738" rpa="false" schemaversion="2">
 <suite id="s1" name="EndtoEndTest" source="C:\Users\arvram\PycharmProjects\FlipkartFlightBooking\tests\EndtoEndTest.robot">
 <kw name="Opening Browser with FlipKart Url" library="Generic" type="SETUP">
-<kw name="Create Webdriver" library="SeleniumLibrary">
-<arg>${browser_name}</arg>
-<arg>executable_path=C:/Users/arvram/PycharmProjects/FlipkartFlightBooking/chromedriver.exe</arg>
-<doc>Creates an instance of Selenium WebDriver.</doc>
-<msg timestamp="20211110 11:55:31.966" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
-<status status="PASS" starttime="20211110 11:55:31.966" endtime="20211110 11:55:33.664"/>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
+<kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20211110 11:55:33.665" level="INFO">Opening url 'https://www.flipkart.com/'</msg>
-<status status="PASS" starttime="20211110 11:55:33.665" endtime="20211110 11:55:35.582"/>
+<arg>${browser_name}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211110 21:47:26.173" level="INFO">Opening browser 'Chrome' to base url 'https://www.flipkart.com/'.</msg>
+<status status="PASS" starttime="20211110 21:47:26.173" endtime="20211110 21:47:30.659"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20211110 11:55:35.583" endtime="20211110 11:55:35.719"/>
+<status status="PASS" starttime="20211110 21:47:30.660" endtime="20211110 21:47:30.828"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20211110 11:55:38.722" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20211110 11:55:35.720" endtime="20211110 11:55:38.722"/>
+<msg timestamp="20211110 21:47:33.830" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211110 21:47:30.828" endtime="20211110 21:47:33.830"/>
 </kw>
-<status status="PASS" starttime="20211110 11:55:31.965" endtime="20211110 11:55:38.722"/>
+<status status="PASS" starttime="20211110 21:47:26.173" endtime="20211110 21:47:33.830"/>
 </kw>
 <test id="s1-t1" name="Should be able to complete an End to end scneario">
 <kw name="Click on the close icon in LoginPopup" library="LandingPageObjects">
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>15s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20211110 11:55:38.724" endtime="20211110 11:55:38.727"/>
+<status status="PASS" starttime="20211110 21:47:33.832" endtime="20211110 21:47:33.839"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>xpath://button[contains(text(),'✕')]</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20211110 11:55:38.728" level="INFO">Clicking button 'xpath://button[contains(text(),'✕')]'.</msg>
-<status status="PASS" starttime="20211110 11:55:38.727" endtime="20211110 11:55:38.881"/>
+<msg timestamp="20211110 21:47:33.840" level="INFO">Clicking button 'xpath://button[contains(text(),'✕')]'.</msg>
+<status status="PASS" starttime="20211110 21:47:33.839" endtime="20211110 21:47:34.003"/>
 </kw>
-<status status="PASS" starttime="20211110 11:55:38.724" endtime="20211110 11:55:38.881"/>
+<status status="PASS" starttime="20211110 21:47:33.831" endtime="20211110 21:47:34.003"/>
 </kw>
 <kw name="Click on the Travel Image option" library="LandingPageObjects">
 <kw name="Click Image" library="SeleniumLibrary">
 <arg>xpath://img[@alt='Travel']</arg>
 <doc>Clicks an image identified by ``locator``.</doc>
-<msg timestamp="20211110 11:55:38.883" level="INFO">Clicking image 'xpath://img[@alt='Travel']'.</msg>
-<status status="PASS" starttime="20211110 11:55:38.882" endtime="20211110 11:55:38.990"/>
+<msg timestamp="20211110 21:47:34.005" level="INFO">Clicking image 'xpath://img[@alt='Travel']'.</msg>
+<status status="PASS" starttime="20211110 21:47:34.005" endtime="20211110 21:47:34.124"/>
 </kw>
-<status status="PASS" starttime="20211110 11:55:38.881" endtime="20211110 11:55:38.990"/>
+<status status="PASS" starttime="20211110 21:47:34.004" endtime="20211110 21:47:34.125"/>
 </kw>
 <kw name=" Wait for booking page to Load" library="BookingPageObjects">
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>${flipkart_title}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20211110 11:55:38.991" endtime="20211110 11:55:39.052"/>
+<status status="PASS" starttime="20211110 21:47:34.126" endtime="20211110 21:47:34.154"/>
 </kw>
-<status status="PASS" starttime="20211110 11:55:38.991" endtime="20211110 11:55:39.053"/>
+<status status="PASS" starttime="20211110 21:47:34.126" endtime="20211110 21:47:34.155"/>
 </kw>
 <kw name="Verify if OneWay Radio button is selected as default" library="BookingPageObjects">
 <kw name="Radio Button Should Be Set To" library="SeleniumLibrary">
 <arg>tripTypeList</arg>
 <arg>on</arg>
 <doc>Verifies radio button group ``group_name`` is set to ``value``.</doc>
-<msg timestamp="20211110 11:55:39.054" level="INFO">Verifying radio button 'tripTypeList' has selection 'on'.</msg>
-<status status="PASS" starttime="20211110 11:55:39.054" endtime="20211110 11:55:39.295"/>
+<msg timestamp="20211110 21:47:34.156" level="INFO">Verifying radio button 'tripTypeList' has selection 'on'.</msg>
+<status status="PASS" starttime="20211110 21:47:34.156" endtime="20211110 21:47:34.563"/>
 </kw>
-<status status="PASS" starttime="20211110 11:55:39.053" endtime="20211110 11:55:39.296"/>
+<status status="PASS" starttime="20211110 21:47:34.156" endtime="20211110 21:47:34.563"/>
 </kw>
 <kw name="Click on the TwoWay Radio Button" library="BookingPageObjects">
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>15s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20211110 11:55:39.297" endtime="20211110 11:55:39.301"/>
+<status status="PASS" starttime="20211110 21:47:34.564" endtime="20211110 21:47:34.569"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${round_trip_button}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211110 11:55:39.302" level="INFO">Clicking element 'xpath://div[contains(text(),'Round Trip')]'.</msg>
-<status status="PASS" starttime="20211110 11:55:39.301" endtime="20211110 11:55:39.595"/>
+<msg timestamp="20211110 21:47:34.570" level="INFO">Clicking element 'xpath://div[contains(text(),'Round Trip')]'.</msg>
+<status status="PASS" starttime="20211110 21:47:34.569" endtime="20211110 21:47:34.844"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${round_trip_button}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211110 11:55:39.595" level="INFO">Clicking element 'xpath://div[contains(text(),'Round Trip')]'.</msg>
-<status status="PASS" starttime="20211110 11:55:39.595" endtime="20211110 11:55:39.657"/>
+<msg timestamp="20211110 21:47:34.845" level="INFO">Clicking element 'xpath://div[contains(text(),'Round Trip')]'.</msg>
+<status status="PASS" starttime="20211110 21:47:34.845" endtime="20211110 21:47:34.929"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20211110 11:55:44.659" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20211110 11:55:39.657" endtime="20211110 11:55:44.659"/>
+<msg timestamp="20211110 21:47:39.931" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20211110 21:47:34.929" endtime="20211110 21:47:39.931"/>
 </kw>
-<status status="PASS" starttime="20211110 11:55:39.296" endtime="20211110 11:55:44.659"/>
+<status status="PASS" starttime="20211110 21:47:34.564" endtime="20211110 21:47:39.931"/>
 </kw>
 <kw name="Select the depature city" library="BookingPageObjects">
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>15s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20211110 11:55:44.659" endtime="20211110 11:55:44.662"/>
+<status status="PASS" starttime="20211110 21:47:39.932" endtime="20211110 21:47:39.934"/>
 </kw>
 <kw name="Auto Suggestion Dropdown" library="BookingPage">
 <arg>${depart_city}</arg>
 <arg>Kolkata</arg>
-<msg timestamp="20211110 11:55:44.662" level="INFO">Clicking element 'xpath://input[@name='0-departcity']'.</msg>
-<msg timestamp="20211110 11:55:44.723" level="INFO">Sending key(s) ('CTRL+a',) to xpath://input[@name='0-departcity'] element.</msg>
-<msg timestamp="20211110 11:55:45.024" level="INFO">Pressing special key CONTROL down.</msg>
-<msg timestamp="20211110 11:55:45.024" level="INFO">Sending key a</msg>
-<msg timestamp="20211110 11:55:45.024" level="INFO">Releasing special key CONTROL.</msg>
-<msg timestamp="20211110 11:55:45.035" level="INFO">Sending key(s) ('BACKSPACE',) to xpath://input[@name='0-departcity'] element.</msg>
-<msg timestamp="20211110 11:55:45.319" level="INFO">Pressing special key BACKSPACE to element.</msg>
-<msg timestamp="20211110 11:55:45.320" level="INFO">Releasing special key BACKSPACE.</msg>
-<msg timestamp="20211110 11:55:45.336" level="INFO">Typing text 'Kolkata' into text field 'xpath://input[@name='0-departcity']'.</msg>
-<msg timestamp="20211110 11:55:48.424" level="INFO">Sending key(s) ('ARROW_DOWN',) to xpath://input[@name='0-departcity'] element.</msg>
-<msg timestamp="20211110 11:55:48.706" level="INFO">Pressing special key ARROW_DOWN to element.</msg>
-<msg timestamp="20211110 11:55:48.706" level="INFO">Releasing special key ARROW_DOWN.</msg>
-<msg timestamp="20211110 11:55:48.715" level="INFO">Sending key(s) ('ENTER',) to xpath://input[@name='0-departcity'] element.</msg>
-<msg timestamp="20211110 11:55:49.002" level="INFO">Pressing special key ENTER to element.</msg>
-<msg timestamp="20211110 11:55:49.002" level="INFO">Releasing special key ENTER.</msg>
-<status status="PASS" starttime="20211110 11:55:44.662" endtime="20211110 11:55:49.016"/>
+<msg timestamp="20211110 21:47:39.934" level="INFO">Clicking element 'xpath://input[@name='0-departcity']'.</msg>
+<msg timestamp="20211110 21:47:40.012" level="INFO">Sending key(s) ('CTRL+a',) to xpath://input[@name='0-departcity'] element.</msg>
+<msg timestamp="20211110 21:47:40.315" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20211110 21:47:40.315" level="INFO">Sending key a</msg>
+<msg timestamp="20211110 21:47:40.315" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20211110 21:47:40.328" level="INFO">Sending key(s) ('BACKSPACE',) to xpath://input[@name='0-departcity'] element.</msg>
+<msg timestamp="20211110 21:47:40.602" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg timestamp="20211110 21:47:40.602" level="INFO">Releasing special key BACKSPACE.</msg>
+<msg timestamp="20211110 21:47:40.620" level="INFO">Typing text 'Kolkata' into text field 'xpath://input[@name='0-departcity']'.</msg>
+<msg timestamp="20211110 21:47:43.726" level="INFO">Sending key(s) ('ARROW_DOWN',) to xpath://input[@name='0-departcity'] element.</msg>
+<msg timestamp="20211110 21:47:44.002" level="INFO">Pressing special key ARROW_DOWN to element.</msg>
+<msg timestamp="20211110 21:47:44.002" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<msg timestamp="20211110 21:47:44.010" level="INFO">Sending key(s) ('ENTER',) to xpath://input[@name='0-departcity'] element.</msg>
+<msg timestamp="20211110 21:47:44.301" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20211110 21:47:44.301" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20211110 21:47:39.934" endtime="20211110 21:47:44.317"/>
 </kw>
-<status status="PASS" starttime="20211110 11:55:44.659" endtime="20211110 11:55:49.016"/>
+<status status="PASS" starttime="20211110 21:47:39.932" endtime="20211110 21:47:44.317"/>
 </kw>
 <kw name="Select the arrival city" library="BookingPageObjects">
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>20s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20211110 11:55:49.017" endtime="20211110 11:55:49.019"/>
+<status status="PASS" starttime="20211110 21:47:44.318" endtime="20211110 21:47:44.320"/>
 </kw>
 <kw name="Auto Suggestion Dropdown" library="BookingPage">
 <arg>${arrival_city}</arg>
 <arg>Chennai</arg>
-<msg timestamp="20211110 11:55:49.019" level="INFO">Clicking element 'xpath://input[@name='0-arrivalcity']'.</msg>
-<msg timestamp="20211110 11:55:49.087" level="INFO">Sending key(s) ('CTRL+a',) to xpath://input[@name='0-arrivalcity'] element.</msg>
-<msg timestamp="20211110 11:55:49.366" level="INFO">Pressing special key CONTROL down.</msg>
-<msg timestamp="20211110 11:55:49.367" level="INFO">Sending key a</msg>
-<msg timestamp="20211110 11:55:49.367" level="INFO">Releasing special key CONTROL.</msg>
-<msg timestamp="20211110 11:55:49.377" level="INFO">Sending key(s) ('BACKSPACE',) to xpath://input[@name='0-arrivalcity'] element.</msg>
-<msg timestamp="20211110 11:55:49.650" level="INFO">Pressing special key BACKSPACE to element.</msg>
-<msg timestamp="20211110 11:55:49.650" level="INFO">Releasing special key BACKSPACE.</msg>
-<msg timestamp="20211110 11:55:49.658" level="INFO">Typing text 'Chennai' into text field 'xpath://input[@name='0-arrivalcity']'.</msg>
-<msg timestamp="20211110 11:55:52.743" level="INFO">Sending key(s) ('ARROW_DOWN',) to xpath://input[@name='0-arrivalcity'] element.</msg>
-<msg timestamp="20211110 11:55:53.016" level="INFO">Pressing special key ARROW_DOWN to element.</msg>
-<msg timestamp="20211110 11:55:53.016" level="INFO">Releasing special key ARROW_DOWN.</msg>
-<msg timestamp="20211110 11:55:53.023" level="INFO">Sending key(s) ('ENTER',) to xpath://input[@name='0-arrivalcity'] element.</msg>
-<msg timestamp="20211110 11:55:53.298" level="INFO">Pressing special key ENTER to element.</msg>
-<msg timestamp="20211110 11:55:53.298" level="INFO">Releasing special key ENTER.</msg>
-<status status="PASS" starttime="20211110 11:55:49.019" endtime="20211110 11:55:53.311"/>
+<msg timestamp="20211110 21:47:44.321" level="INFO">Clicking element 'xpath://input[@name='0-arrivalcity']'.</msg>
+<msg timestamp="20211110 21:47:44.400" level="INFO">Sending key(s) ('CTRL+a',) to xpath://input[@name='0-arrivalcity'] element.</msg>
+<msg timestamp="20211110 21:47:44.684" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20211110 21:47:44.684" level="INFO">Sending key a</msg>
+<msg timestamp="20211110 21:47:44.684" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20211110 21:47:44.698" level="INFO">Sending key(s) ('BACKSPACE',) to xpath://input[@name='0-arrivalcity'] element.</msg>
+<msg timestamp="20211110 21:47:44.983" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg timestamp="20211110 21:47:44.983" level="INFO">Releasing special key BACKSPACE.</msg>
+<msg timestamp="20211110 21:47:44.992" level="INFO">Typing text 'Chennai' into text field 'xpath://input[@name='0-arrivalcity']'.</msg>
+<msg timestamp="20211110 21:47:48.094" level="INFO">Sending key(s) ('ARROW_DOWN',) to xpath://input[@name='0-arrivalcity'] element.</msg>
+<msg timestamp="20211110 21:47:48.367" level="INFO">Pressing special key ARROW_DOWN to element.</msg>
+<msg timestamp="20211110 21:47:48.367" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<msg timestamp="20211110 21:47:48.376" level="INFO">Sending key(s) ('ENTER',) to xpath://input[@name='0-arrivalcity'] element.</msg>
+<msg timestamp="20211110 21:47:48.665" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20211110 21:47:48.665" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20211110 21:47:44.321" endtime="20211110 21:47:48.679"/>
 </kw>
-<status status="PASS" starttime="20211110 11:55:49.016" endtime="20211110 11:55:53.311"/>
+<status status="PASS" starttime="20211110 21:47:44.318" endtime="20211110 21:47:48.679"/>
 </kw>
 <kw name="Select the Departue date" library="BookingPageObjects">
 <kw name="Date Selection" library="BookingPage">
 <arg>1</arg>
 <arg>13</arg>
-<msg timestamp="20211110 11:55:53.312" level="INFO">Clicking element '(//button[contains(text(),'1')])[13]'.</msg>
-<status status="PASS" starttime="20211110 11:55:53.312" endtime="20211110 11:55:53.497"/>
+<msg timestamp="20211110 21:47:48.680" level="INFO">Clicking element '(//button[contains(text(),'1')])[13]'.</msg>
+<status status="PASS" starttime="20211110 21:47:48.680" endtime="20211110 21:47:48.880"/>
 </kw>
-<status status="PASS" starttime="20211110 11:55:53.312" endtime="20211110 11:55:53.497"/>
+<status status="PASS" starttime="20211110 21:47:48.680" endtime="20211110 21:47:48.880"/>
 </kw>
 <kw name="Select the Return date" library="BookingPageObjects">
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>15s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20211110 11:55:53.499" endtime="20211110 11:55:53.502"/>
+<status status="PASS" starttime="20211110 21:47:48.882" endtime="20211110 21:47:48.885"/>
 </kw>
 <kw name="Date Selection" library="BookingPage">
 <arg>30</arg>
 <arg>2</arg>
-<msg timestamp="20211110 11:55:53.502" level="INFO">Clicking element '(//button[contains(text(),'30')])[2]'.</msg>
-<status status="PASS" starttime="20211110 11:55:53.502" endtime="20211110 11:55:53.575"/>
+<msg timestamp="20211110 21:47:48.885" level="INFO">Clicking element '(//button[contains(text(),'30')])[2]'.</msg>
+<status status="PASS" starttime="20211110 21:47:48.885" endtime="20211110 21:47:48.958"/>
 </kw>
-<status status="PASS" starttime="20211110 11:55:53.497" endtime="20211110 11:55:53.576"/>
+<status status="PASS" starttime="20211110 21:47:48.881" endtime="20211110 21:47:48.959"/>
 </kw>
 <kw name="Add total number of Adults and childrens travellers" library="BookingPageObjects">
 <kw name="Add Travellers" library="BookingPage">
 <arg>2</arg>
-<msg timestamp="20211110 11:55:53.579" level="INFO">Clicking element '(// div[@class ='VjWsXZ'])[2]'.</msg>
-<status status="PASS" starttime="20211110 11:55:53.578" endtime="20211110 11:55:53.769"/>
+<msg timestamp="20211110 21:47:48.961" level="INFO">Clicking element '(// div[@class ='VjWsXZ'])[2]'.</msg>
+<status status="PASS" starttime="20211110 21:47:48.961" endtime="20211110 21:47:49.107"/>
 </kw>
 <kw name="Add Travellers" library="BookingPage">
 <arg>4</arg>
-<msg timestamp="20211110 11:55:53.769" level="INFO">Clicking element '(// div[@class ='VjWsXZ'])[4]'.</msg>
-<status status="PASS" starttime="20211110 11:55:53.769" endtime="20211110 11:55:53.846"/>
+<msg timestamp="20211110 21:47:49.108" level="INFO">Clicking element '(// div[@class ='VjWsXZ'])[4]'.</msg>
+<status status="PASS" starttime="20211110 21:47:49.108" endtime="20211110 21:47:49.174"/>
 </kw>
-<status status="PASS" starttime="20211110 11:55:53.578" endtime="20211110 11:55:53.847"/>
+<status status="PASS" starttime="20211110 21:47:48.961" endtime="20211110 21:47:49.175"/>
 </kw>
 <kw name="Verify if Economy Radio button is selected as default" library="BookingPageObjects">
 <kw name="Radio Button Should Be Set To" library="SeleniumLibrary">
 <arg>travel-cabin-class</arg>
 <arg>on</arg>
 <doc>Verifies radio button group ``group_name`` is set to ``value``.</doc>
-<msg timestamp="20211110 11:55:53.848" level="INFO">Verifying radio button 'travel-cabin-class' has selection 'on'.</msg>
-<status status="PASS" starttime="20211110 11:55:53.848" endtime="20211110 11:55:53.890"/>
+<msg timestamp="20211110 21:47:49.176" level="INFO">Verifying radio button 'travel-cabin-class' has selection 'on'.</msg>
+<status status="PASS" starttime="20211110 21:47:49.176" endtime="20211110 21:47:49.218"/>
 </kw>
-<status status="PASS" starttime="20211110 11:55:53.847" endtime="20211110 11:55:53.891"/>
+<status status="PASS" starttime="20211110 21:47:49.175" endtime="20211110 21:47:49.219"/>
 </kw>
 <kw name="Click on the Search button after entering all booking details" library="BookingPageObjects">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${search_button}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211110 11:55:53.892" level="INFO">Clicking element 'xpath://span[normalize-space()='SEARCH']'.</msg>
-<status status="PASS" starttime="20211110 11:55:53.892" endtime="20211110 11:55:53.959"/>
+<msg timestamp="20211110 21:47:49.220" level="INFO">Clicking element 'xpath://span[normalize-space()='SEARCH']'.</msg>
+<status status="PASS" starttime="20211110 21:47:49.220" endtime="20211110 21:47:49.289"/>
 </kw>
-<status status="PASS" starttime="20211110 11:55:53.891" endtime="20211110 11:55:53.960"/>
+<status status="PASS" starttime="20211110 21:47:49.220" endtime="20211110 21:47:49.290"/>
 </kw>
 <kw name="Wait for the Flight booking page to Load" library="FlightResultsPageObjects">
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>30s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20211110 11:55:53.961" endtime="20211110 11:55:53.964"/>
+<status status="PASS" starttime="20211110 21:47:49.291" endtime="20211110 21:47:49.295"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>11s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20211110 11:56:04.965" level="INFO">Slept 11 seconds</msg>
-<status status="PASS" starttime="20211110 11:55:53.964" endtime="20211110 11:56:04.965"/>
+<msg timestamp="20211110 21:48:00.297" level="INFO">Slept 11 seconds</msg>
+<status status="PASS" starttime="20211110 21:47:49.295" endtime="20211110 21:48:00.297"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>${nonstop_button}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20211110 11:56:04.965" endtime="20211110 11:56:04.976"/>
+<status status="PASS" starttime="20211110 21:48:00.297" endtime="20211110 21:48:00.309"/>
 </kw>
-<status status="PASS" starttime="20211110 11:55:53.960" endtime="20211110 11:56:04.976"/>
+<status status="PASS" starttime="20211110 21:47:49.291" endtime="20211110 21:48:00.309"/>
 </kw>
 <kw name="Verify if the Non stop checkbox is selected by default" library="FlightResultsPageObjects">
 <kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
@@ -231,35 +225,35 @@
 <arg>class</arg>
 <arg>c-switch switch-off</arg>
 <doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
-<msg timestamp="20211110 11:56:04.996" level="INFO">Element 'xpath:(//span[@class='c-switch switch-off'])[1]' attribute 'class' contains value 'c-switch switch-off'.</msg>
-<status status="PASS" starttime="20211110 11:56:04.977" endtime="20211110 11:56:04.996"/>
+<msg timestamp="20211110 21:48:00.329" level="INFO">Element 'xpath:(//span[@class='c-switch switch-off'])[1]' attribute 'class' contains value 'c-switch switch-off'.</msg>
+<status status="PASS" starttime="20211110 21:48:00.310" endtime="20211110 21:48:00.329"/>
 </kw>
-<status status="PASS" starttime="20211110 11:56:04.977" endtime="20211110 11:56:04.996"/>
+<status status="PASS" starttime="20211110 21:48:00.309" endtime="20211110 21:48:00.329"/>
 </kw>
 <kw name="Click on the Non stop checkbox if it is not selected" library="FlightResultsPageObjects">
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>20s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20211110 11:56:04.997" endtime="20211110 11:56:04.999"/>
+<status status="PASS" starttime="20211110 21:48:00.330" endtime="20211110 21:48:00.333"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${nonstop_verification}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211110 11:56:05.000" level="INFO">Clicking element 'xpath:(//span[@class='c-switch switch-off'])[1]'.</msg>
-<status status="PASS" starttime="20211110 11:56:04.999" endtime="20211110 11:56:05.098"/>
+<msg timestamp="20211110 21:48:00.333" level="INFO">Clicking element 'xpath:(//span[@class='c-switch switch-off'])[1]'.</msg>
+<status status="PASS" starttime="20211110 21:48:00.333" endtime="20211110 21:48:00.434"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20211110 11:56:07.098" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20211110 11:56:05.098" endtime="20211110 11:56:07.098"/>
+<msg timestamp="20211110 21:48:02.436" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211110 21:48:00.435" endtime="20211110 21:48:02.436"/>
 </kw>
-<status status="PASS" starttime="20211110 11:56:04.997" endtime="20211110 11:56:07.098"/>
+<status status="PASS" starttime="20211110 21:48:00.330" endtime="20211110 21:48:02.436"/>
 </kw>
 <kw name="Print prices of all arrival flights" library="FlightResultsPageObjects">
 <kw name="Arrival Flight Prices" library="FlightResultsPage">
 <arg>${arrival_flight_prices}</arg>
-<msg timestamp="20211110 11:56:07.204" level="INFO">Chennai -&gt; Kolkata
+<msg timestamp="20211110 21:48:02.545" level="INFO">Chennai -&gt; Kolkata
 2359
 Chennai -&gt; Kolkata
 3303
@@ -273,23 +267,19 @@ Chennai -&gt; Kolkata
 3830
 Chennai -&gt; Kolkata
 4726</msg>
-<status status="PASS" starttime="20211110 11:56:07.099" endtime="20211110 11:56:07.204"/>
+<status status="PASS" starttime="20211110 21:48:02.437" endtime="20211110 21:48:02.545"/>
 </kw>
-<status status="PASS" starttime="20211110 11:56:07.098" endtime="20211110 11:56:07.204"/>
+<status status="PASS" starttime="20211110 21:48:02.437" endtime="20211110 21:48:02.545"/>
 </kw>
 <kw name="Print prices of all depature flights and select the last depauture flight from the list" library="FlightResultsPageObjects">
 <kw name="Print Depart Flight Prices And Select Last Depature Flight" library="FlightResultsPage">
 <arg>${depart_flight_prices}</arg>
-<msg timestamp="20211110 11:56:07.380" level="INFO">Executing JavaScript:
+<msg timestamp="20211110 21:48:02.716" level="INFO">Executing JavaScript:
 window.scrollTo(0, 1500)
 Without any arguments.</msg>
-<msg timestamp="20211110 11:56:10.398" level="INFO">Clicking element '(//div[@class='radio-list-item'])[12]'.</msg>
-<msg timestamp="20211110 11:56:12.465" level="INFO">Kolkata -&gt; Chennai
-5265
-Kolkata -&gt; Chennai
-5265
-Kolkata -&gt; Chennai
-5265
+<msg timestamp="20211110 21:48:05.735" level="INFO">Clicking element '(//div[@class='radio-list-item'])[11]'.</msg>
+<msg timestamp="20211110 21:48:07.797" level="INFO">Kolkata -&gt; Chennai
+4658
 Kolkata -&gt; Chennai
 5570
 Kolkata -&gt; Chennai
@@ -305,57 +295,59 @@ Kolkata -&gt; Chennai
 Kolkata -&gt; Chennai
 8322
 Kolkata -&gt; Chennai
-8379
+8378
+Kolkata -&gt; Chennai
+8878
 Kolkata -&gt; Chennai
 9114
-12</msg>
-<status status="PASS" starttime="20211110 11:56:07.205" endtime="20211110 11:56:12.465"/>
+11</msg>
+<status status="PASS" starttime="20211110 21:48:02.546" endtime="20211110 21:48:07.797"/>
 </kw>
-<status status="PASS" starttime="20211110 11:56:07.205" endtime="20211110 11:56:12.465"/>
+<status status="PASS" starttime="20211110 21:48:02.546" endtime="20211110 21:48:07.797"/>
 </kw>
 <kw name="Click on the book button to book the flights" library="FlightResultsPageObjects">
 <kw name="Sleep" library="BuiltIn">
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20211110 11:56:17.467" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20211110 11:56:12.466" endtime="20211110 11:56:17.467"/>
+<msg timestamp="20211110 21:48:12.798" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20211110 21:48:07.798" endtime="20211110 21:48:12.798"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${book_button}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20211110 11:56:17.467" level="INFO">Clicking button 'css:button.c-btn'.</msg>
-<status status="PASS" starttime="20211110 11:56:17.467" endtime="20211110 11:56:18.146"/>
+<msg timestamp="20211110 21:48:12.798" level="INFO">Clicking button 'css:button.c-btn'.</msg>
+<status status="PASS" starttime="20211110 21:48:12.798" endtime="20211110 21:48:13.932"/>
 </kw>
-<status status="PASS" starttime="20211110 11:56:12.466" endtime="20211110 11:56:18.147"/>
+<status status="PASS" starttime="20211110 21:48:07.798" endtime="20211110 21:48:13.933"/>
 </kw>
 <kw name="Get the title of the Page and Print in it." library="ReviewPageObject">
 <kw name="Sleep" library="BuiltIn">
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20211110 11:56:23.150" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20211110 11:56:18.149" endtime="20211110 11:56:23.150"/>
+<msg timestamp="20211110 21:48:18.935" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20211110 21:48:13.934" endtime="20211110 21:48:18.935"/>
 </kw>
 <kw name="Log Title" library="SeleniumLibrary">
 <doc>Logs and returns the title of the current page.</doc>
-<msg timestamp="20211110 11:56:23.155" level="INFO">Review Store Online - Buy Review Online at Best Price in India | Flipkart.com</msg>
-<status status="PASS" starttime="20211110 11:56:23.150" endtime="20211110 11:56:23.156"/>
+<msg timestamp="20211110 21:48:18.941" level="INFO">Review Store Online - Buy Review Online at Best Price in India | Flipkart.com</msg>
+<status status="PASS" starttime="20211110 21:48:18.935" endtime="20211110 21:48:18.941"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Review Store Online - Buy Review Online at Best Price in India | Flipkart.com</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20211110 11:56:23.160" level="INFO">Page title is 'Review Store Online - Buy Review Online at Best Price in India | Flipkart.com'.</msg>
-<status status="PASS" starttime="20211110 11:56:23.156" endtime="20211110 11:56:23.160"/>
+<msg timestamp="20211110 21:48:18.945" level="INFO">Page title is 'Review Store Online - Buy Review Online at Best Price in India | Flipkart.com'.</msg>
+<status status="PASS" starttime="20211110 21:48:18.941" endtime="20211110 21:48:18.946"/>
 </kw>
-<status status="PASS" starttime="20211110 11:56:18.148" endtime="20211110 11:56:23.160"/>
+<status status="PASS" starttime="20211110 21:48:13.933" endtime="20211110 21:48:18.946"/>
 </kw>
-<status status="PASS" starttime="20211110 11:55:38.723" endtime="20211110 11:56:23.161"/>
+<status status="PASS" starttime="20211110 21:47:33.830" endtime="20211110 21:48:18.946"/>
 </test>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20211110 11:56:23.162" endtime="20211110 11:56:25.433"/>
+<status status="PASS" starttime="20211110 21:48:18.948" endtime="20211110 21:48:21.245"/>
 </kw>
 <doc>This Contains BookingPage Test in them</doc>
-<status status="PASS" starttime="20211110 11:55:31.569" endtime="20211110 11:56:25.433"/>
+<status status="PASS" starttime="20211110 21:47:25.742" endtime="20211110 21:48:21.245"/>
 </suite>
 <statistics>
 <total>
